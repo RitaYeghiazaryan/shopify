@@ -1,0 +1,41 @@
+@use "src/sass/abstracts/mixins";
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    @include mixins.flexCenter;
+
+    .content {
+        height: 75%;
+        width: 500px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 10px 35px;
+        text-align: center;
+        background-color:#f9fbe7f5;
+
+        .title{
+            color:rgb(120, 197, 143);
+        }
+        .submit{
+            font-size: 20px;
+            color:coral;
+            margin-top: 15px;
+            cursor: pointer;
+            padding: 5px 15px;
+            font-style: oblique;
+            user-select: none;
+            border: 2px solid #77b75e
+            
+        }
+
+        .image{
+            width: 70%;
+            object-fit: fill;
+        }
+    }
+}

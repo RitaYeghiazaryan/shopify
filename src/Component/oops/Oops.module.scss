@@ -1,0 +1,17 @@
+@use 'src/sass/abstracts/_mixins.scss';
+.container {
+  flex: 1;
+  @include mixins.flexCenter;
+  color: red;
+  font-size: 32px;
+  flex-direction: column;
+
+  .ooo {
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    margin-top: 50px;
+
+    @include mixins.flexCenter;
+  }
+}
