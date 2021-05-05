@@ -4,17 +4,17 @@ import { Redirect, Route, Switch } from "react-router";
 import { connect, useDispatch } from "react-redux";
 //MY COMPONENTS
 import Header from "src/layout/header/Header.layout";
-import HomePage from "../page/home/home.page";
-import ShopPage from "src/page/shop/Shop.page";
-import AuthPage from "src/page/auth/Auth.page";
+import HomePage from "../pages/home/home.page";
+import ShopPage from "src/pages/shop/Shop.page";
+import AuthPage from "src/pages/auth/Auth.page";
 import Oops from "src/Component/oops/Oops.component";
 
 //STYLES
 import styles from "./app.module.scss";
-import Checkout from "src/page/checkout/Checkout.page";
+import Checkout from "src/pages/checkout/Checkout.page";
 import { useEffect } from "react";
 import { getCategoriesAsync } from "src/redux/shop/shop.actions";
-import Contacts from "src/page/contacts/Contacts.page";
+import Contacts from "src/pages/contacts/Contacts.page";
 
 const App = (props) => {
   const { globalErrorMessage } = props;

@@ -1,15 +1,11 @@
-import { useState } from "react";
+import axios from "axios";
+import useInput from "src/hooks/useInput.hook";
+//BASE COMPONENT
 import Button from "src/Component/Button/button.component";
 import Input from "src/Component/Input/Input.component";
-import axios from "axios";
-//STYLES
 
 const SignUp = () => {
-  const [inputState, setInputState] = useState([]);
-  const handleInput = (event) => {
-    const { value, name } = event.target;
-    setInputState({ ...inputState, [name]: value });
-  };
+  const { handleInput, inputState } = useInput();
   const handleSubmit = async (event) => {
     event.preventDefault();
     const result = await axios.post("auth/signup", inputState);
